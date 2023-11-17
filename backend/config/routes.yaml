@@ -1,0 +1,36 @@
+# controllers:
+#     resource:
+#         path: ../src/Controller/
+#         namespace: App\Controller
+#     type: attribute
+make_sortie:
+    path: /make/sortie
+    controller: App\Controller\ApiController::createSortie
+
+make_user:
+    path: /make/user
+    controller: App\Controller\ApiController::createUser
+
+get_user:
+    path: /get/user
+    controller: App\Controller\ApiController::getUserData
+
+event_user:
+    path: /event/user/{id_sortie}
+    controller: App\Controller\ApiController::getEventUser
+
+list_sortie:
+    path: /list/sortie
+    controller: App\Controller\ApiController::getSortie
+
+message:
+    path: /message/{id_sortie}
+    controller: App\Controller\ApiController::getMessage
+
+create:
+    path: /create
+    controller: App\Controller\ApiController::createMessage
+
+get_sortie_by_id:
+    path: /sortie/{id}
+    controller: App\Controller\ApiController::getSortieById
